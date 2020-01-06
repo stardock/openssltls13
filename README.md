@@ -26,3 +26,9 @@ https://www.cnblogs.com/xyb930826/p/6077348.html (Bug fix)
 https://zhih.me/make-your-website-support-tls1-3/ (Patch to openssl)  
 
 
+
+
+https://blog.sometimesnaive.org/article/78.html  
+https://blog.sometimesnaive.org/article/64  
+https://imququ.com/post/optimize-ssl-ciphers-with-boringssl.html  
+http://nginx.org/download/  
