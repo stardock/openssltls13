@@ -14,7 +14,7 @@ patch -p1 < ../openssl-patch/openssl-1.1.1-chacha_draft.patch
 make  
 make install  
 
-
+openssl ciphers -s -tls1_3  
 
 
 Reference:  
