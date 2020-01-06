@@ -17,10 +17,12 @@ make install
 
 
 
-Reference:
+Reference:  
+https://www.openssl.org/source/ (Package source)  
 https://blog.csdn.net/mrpre/article/details/78575481 (Path to build)  
 https://github.com/openssl/openssl/issues/8838 (List Ciphers)  
-
-
+https://www.jianshu.com/p/aa3f7c4d3a10 (Test TLS)  
+https://www.cnblogs.com/xyb930826/p/6077348.html (Bug fix)  
+https://zhih.me/make-your-website-support-tls1-3/ (Patch to openssl)  
 
 
