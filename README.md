@@ -39,3 +39,5 @@ https://trac.nginx.org/nginx/ticket/1670
 https://trac.nginx.org/nginx/ticket/1529  
 https://ftp.openssl.org/source/old/1.1.1/  
 
+https://github.com/openssl/openssl/issues/7562  
+
