@@ -20,16 +20,26 @@ mv openssl-OpenSSL_1_1_1 openssl
 
 cd 
 git clone -b openssl-1.1.1 https://github.com/stardock/openssl-patch  
-cd openssl 
+cd openssl   
 patch -p1 < ../openssl-patch/openssl-equal-1.1.1_ciphers.patch  
 patch -p1 < ../openssl-patch/openssl-1.1.1-chacha_draft.patch  
 
-
-
+./config  
 make  
-make install  
 
-openssl ciphers -v | grep TLSv1.3 | column -t
+查看编译结果  
+cd apps  
+./openssl version             #若出现报错参考下面链接(Bug Fix)
+./openssl ciphers -v | grep TLSv1.3 | column -t
+
+```
+[root@vml6xnph apps]# ./openssl ciphers -v | grep TLSv1.3 | column -t
+TLS_AES_256_GCM_SHA384        TLSv1.3  Kx=any  Au=any  Enc=AESGCM(256)             Mac=AEAD
+TLS_CHACHA20_POLY1305_SHA256  TLSv1.3  Kx=any  Au=any  Enc=CHACHA20/POLY1305(256)  Mac=AEAD
+TLS_AES_128_GCM_SHA256        TLSv1.3  Kx=any  Au=any  Enc=AESGCM(128)             Mac=AEAD
+```
+
+
 
 Reference:  
 https://www.openssl.org/source/ (Package source)  
