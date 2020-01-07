@@ -34,7 +34,7 @@ https://imququ.com/post/optimize-ssl-ciphers-with-boringssl.html
 http://nginx.org/download/  
 
 
-OpenSSL Dev issue???
+OpenSSL Dev issue???  
 https://trac.nginx.org/nginx/ticket/1670  
 https://trac.nginx.org/nginx/ticket/1529  
 https://ftp.openssl.org/source/old/1.1.1/  
