@@ -41,3 +41,5 @@ https://ftp.openssl.org/source/old/1.1.1/
 
 https://github.com/openssl/openssl/issues/7562  
 https://www.sinosky.org/compile-nginx-with-a-custom-openssl-library.html  
+让Nginx快速支持TLS1.3协议  
+https://www.jianshu.com/p/aa3f7c4d3a10  
