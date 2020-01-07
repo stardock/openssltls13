@@ -40,4 +40,4 @@ https://trac.nginx.org/nginx/ticket/1529
 https://ftp.openssl.org/source/old/1.1.1/  
 
 https://github.com/openssl/openssl/issues/7562  
-
+https://www.sinosky.org/compile-nginx-with-a-custom-openssl-library.html  
