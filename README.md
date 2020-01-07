@@ -1,21 +1,35 @@
 # openssltls13
 Openssl with TLS1.3 enabled
 
+克隆 OpenSSL
 
-wget https://www.openssl.org/source/openssl-1.1.1d.tar.gz  
-tar xzf openssl-1.1.1d.tar.gz  
-mv openssl-1.1.1d openssl  
-git clone https://github.com/hakasenyang/openssl-patch.git  
-cd openssl  
+这里用的是 1.1.1 稳定版的源码  
+
+cd
+wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1.tar.gz   
+tar xzvf OpenSSL_1_1_1.tar.gz  
+mv openssl-OpenSSL_1_1_1 openssl  
+
+
+
+给 OpenSSL 打补丁  
+
+补丁来自：https://github.com/hakasenyang/openssl-patch  
+
+此补丁的目的是让 OpenSSL 支持 TLS1.3 的 23,26,28 草案，以及 Final 版标准  
+
+cd 
+git clone -b openssl-1.1.1 https://github.com/stardock/openssl-patch  
+cd openssl 
 patch -p1 < ../openssl-patch/openssl-equal-1.1.1_ciphers.patch  
 patch -p1 < ../openssl-patch/openssl-1.1.1-chacha_draft.patch  
 
-./config --prefix=/usr --libdir=lib64 enable-tls1_3  
+
+
 make  
 make install  
 
-openssl ciphers -s -tls1_3  
-
+openssl ciphers -v | grep TLSv1.3 | column -t
 
 Reference:  
 https://www.openssl.org/source/ (Package source)  
@@ -43,3 +57,4 @@ https://github.com/openssl/openssl/issues/7562
 https://www.sinosky.org/compile-nginx-with-a-custom-openssl-library.html  
 让Nginx快速支持TLS1.3协议  
 https://www.jianshu.com/p/aa3f7c4d3a10  
+https://zhih.me/make-your-website-support-tls1-3/  
