@@ -1,6 +1,11 @@
 # openssltls13
 Openssl with TLS1.3 enabled
 
+## 前言  
+
+* 必须执行次教程才可以编译运行后面的nginx  
+* 推荐使用宝塔面板  
+
 克隆 OpenSSL
 
 这里用的是 1.1.1 稳定版的源码  
