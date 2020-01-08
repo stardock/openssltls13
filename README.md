@@ -37,8 +37,8 @@ make install
 重新登录putty  
 
 cd apps  
-openssl version             #若出现报错参考下面链接(Bug Fix)
-openssl ciphers -v | grep TLSv1.3 | column -t
+openssl version             #若出现报错参考下面链接(Bug Fix)  
+openssl ciphers -v | grep TLSv1.3 | column -t  
 
 ```
 [root@vml6xnph apps]# ./openssl ciphers -v | grep TLSv1.3 | column -t
