@@ -43,7 +43,8 @@ which openssl
 
 * 重新登录putty，查看是否安装完成  
 
-openssl version             #若出现报错参考下面链接(Bug Fix)  
+  openssl version  
+  #若出现报错参考下面链接(Bug Fix)  
 `OpenSSL 1.1.1  11 Sep 2018`  
 
 * 查阅是否支持TLSv1.3
