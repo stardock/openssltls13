@@ -26,11 +26,19 @@ patch -p1 < ../openssl-patch/openssl-1.1.1-chacha_draft.patch
 
 ./config  
 make  
+make install  
+
 
 查看编译结果  
+
+[root@vml6xnph ~]# which openssl
+/usr/local/bin/openssl
+
+重新登录putty  
+
 cd apps  
-./openssl version             #若出现报错参考下面链接(Bug Fix)
-./openssl ciphers -v | grep TLSv1.3 | column -t
+openssl version             #若出现报错参考下面链接(Bug Fix)
+openssl ciphers -v | grep TLSv1.3 | column -t
 
 ```
 [root@vml6xnph apps]# ./openssl ciphers -v | grep TLSv1.3 | column -t
