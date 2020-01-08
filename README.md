@@ -5,34 +5,36 @@ Openssl with TLS1.3 enabled
 
 * 必须执行次教程才可以编译运行后面的nginx  
 * 推荐使用宝塔面板  
+* 请每次执行一条，遇到错误请停下来排错  
 
-克隆 OpenSSL
+## 克隆 OpenSSL
 
-这里用的是 1.1.1 稳定版的源码  
-
+* 这里用的是 1.1.1 稳定版的源码  
+```  
 cd
 wget https://github.com/openssl/openssl/archive/OpenSSL_1_1_1.tar.gz   
 tar xzvf OpenSSL_1_1_1.tar.gz  
 mv openssl-OpenSSL_1_1_1 openssl  
+```  
 
+## 给 OpenSSL 打补丁  
 
-
-给 OpenSSL 打补丁  
-
-补丁来自：https://github.com/hakasenyang/openssl-patch  
-
-此补丁的目的是让 OpenSSL 支持 TLS1.3 的 23,26,28 草案，以及 Final 版标准  
-
+* 补丁来自：https://github.com/hakasenyang/openssl-patch  
+* 此补丁的目的是让 OpenSSL 支持 TLS1.3 的 23,26,28 草案，以及 Final 版标准  
+```  
 cd 
 git clone -b openssl-1.1.1 https://github.com/stardock/openssl-patch  
 cd openssl   
 patch -p1 < ../openssl-patch/openssl-equal-1.1.1_ciphers.patch  
 patch -p1 < ../openssl-patch/openssl-1.1.1-chacha_draft.patch  
+```  
 
+## 编译安装
+```  
 ./config  
 make  
 make install  
-
+```  
 
 查看编译结果  
 
