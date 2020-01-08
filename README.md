@@ -64,6 +64,10 @@ https://blog.csdn.net/mrpre/article/details/78575481 (Path to build)
 https://github.com/openssl/openssl/issues/8838 (List Ciphers)  
 https://www.jianshu.com/p/aa3f7c4d3a10 (Test TLS)  
 https://www.cnblogs.com/xyb930826/p/6077348.html (Bug fix)  
+```  
+ln -s /usr/local/lib64/libssl.so.1.1 /usr/lib64/libssl.so.1.1
+ln -s /usr/local/lib64/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1
+```  
 https://zhih.me/make-your-website-support-tls1-3/ (Patch to openssl)  
 
 
