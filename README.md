@@ -47,8 +47,8 @@ which openssl
   #若出现报错参考下面链接(Bug Fix)  
 `OpenSSL 1.1.1  11 Sep 2018`  
 
-* 查阅是否支持TLSv1.3
-openssl ciphers -v | grep TLSv1.3 | column -t  
+* 查阅是否支持TLSv1.3  
+  openssl ciphers -v | grep TLSv1.3 | column -t  
 ```  
 [root@vml6xnph apps]# openssl ciphers -v | grep TLSv1.3 | column -t
 TLS_AES_256_GCM_SHA384        TLSv1.3  Kx=any  Au=any  Enc=AESGCM(256)             Mac=AEAD
