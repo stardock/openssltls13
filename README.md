@@ -38,8 +38,8 @@ make install
 
 ## 查看编译结果  
 
-which openssl
-`/usr/local/bin/openssl`
+  which openssl  
+  `/usr/local/bin/openssl`
 
 * 重新登录putty，查看是否安装完成  
 
