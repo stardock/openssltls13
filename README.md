@@ -36,23 +36,24 @@ make
 make install  
 ```  
 
-查看编译结果  
+## 查看编译结果  
 
-[root@vml6xnph ~]# which openssl
-/usr/local/bin/openssl
+which openssl
+`/usr/local/bin/openssl`
 
-重新登录putty  
+* 重新登录putty，查看是否安装完成  
 
-cd apps  
 openssl version             #若出现报错参考下面链接(Bug Fix)  
-openssl ciphers -v | grep TLSv1.3 | column -t  
+`OpenSSL 1.1.1  11 Sep 2018`  
 
-```
+* 查阅是否支持TLSv1.3
+openssl ciphers -v | grep TLSv1.3 | column -t  
+```  
 [root@vml6xnph apps]# ./openssl ciphers -v | grep TLSv1.3 | column -t
 TLS_AES_256_GCM_SHA384        TLSv1.3  Kx=any  Au=any  Enc=AESGCM(256)             Mac=AEAD
 TLS_CHACHA20_POLY1305_SHA256  TLSv1.3  Kx=any  Au=any  Enc=CHACHA20/POLY1305(256)  Mac=AEAD
 TLS_AES_128_GCM_SHA256        TLSv1.3  Kx=any  Au=any  Enc=AESGCM(128)             Mac=AEAD
-```
+```  
 
 
 
